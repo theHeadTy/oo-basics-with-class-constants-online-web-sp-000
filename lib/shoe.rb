@@ -1,19 +1,16 @@
 class Shoe
   BRANDS = []
   attr_accessor :brand
-  
-  def brand(*args)
-    args.map { |b| BRANDS << b }
+
+  def initialize(brand)
+    BRANDS << brand
     BRANDS.uniq!
   end
 end
-  
 
-#brands = ["Uggs", "Rainbow"]
-#brands.each { |brand| Shoe.new(brand) }
-#puts Shoe::BRANDS
+brands = ["Uggs", "Rainbow", "Nike", "Nike"]
+brands.map do |b|
+  Shoe.new(b)
+end
 
-#brands = ["Uggs", "Rainbow", "Nike", "Nike"]
-
-s = Shoe.new
-s.send :brand, 'Uggs', 'Rainbow', 'Nike', 'Nike'
+Shoe::BRANDS.inspect
