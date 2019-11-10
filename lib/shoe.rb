@@ -15,10 +15,4 @@ end
 brands = ["Uggs", "Rainbow", "Nike", "Nike"]
 
 s = Shoe.new
-s.send :brand, brands
-
-brands.each { |brand| 
-  Shoe.new(brand)
-}
-
-Shoe::BRANDS.uniq
+s.send :brand, 'Uggs', 'Rainbow', 'Nike', 'Nike'
