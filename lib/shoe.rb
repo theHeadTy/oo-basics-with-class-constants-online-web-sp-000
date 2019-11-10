@@ -4,6 +4,7 @@ class Shoe
   
   def brand(*args)
     args.map { |b| BRANDS << b }
+    BRANDS.uniq!
   end
 end
   
@@ -12,7 +13,7 @@ end
 #brands.each { |brand| Shoe.new(brand) }
 #puts Shoe::BRANDS
 
-brands = ["Uggs", "Rainbow", "Nike", "Nike"]
+#brands = ["Uggs", "Rainbow", "Nike", "Nike"]
 
 s = Shoe.new
 s.send :brand, 'Uggs', 'Rainbow', 'Nike', 'Nike'
